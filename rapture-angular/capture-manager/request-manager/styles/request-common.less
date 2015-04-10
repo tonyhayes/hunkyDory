@@ -1,0 +1,71 @@
+/* mfi-common.less */
+
+.request-wrapper {
+	table {
+		margin-bottom: 0px;
+		tr {
+			td {
+				&:nth-child(1) {
+					min-width: 0px;
+				}
+				&:nth-child(2) {
+					min-width: 150px;
+				}
+				&:nth-child(3) {
+					min-width: 70px;
+				}
+				&:nth-child(n+2) {
+					text-align: center;
+				}
+			}
+			input {
+				width: 100%;
+			}
+
+			div > .active-exclusion .taf-icon-green-check {
+				display: none;
+			}
+			div:hover > .active-exclusion .taf-icon-green-check {
+				display: inline-block;
+			}
+
+
+		}
+		.theme-content-row {
+			&:nth-child(n+2) td {
+				background-color: @themeAngryFerretZebra;
+			}
+
+			&.theme-divider td {
+				border-top: 1px solid @themeAngryFerretFrameBorder !important;
+			}
+
+			td {
+				border-top: 1px solid transparent !important;
+
+				&:first-child {
+					padding-left: 16px;
+				}
+
+				.subheader {
+					display: inline-block;
+				}
+			}
+		}
+	}
+	.mfi-inline-editor {
+		margin: 5px 0;
+	}
+
+	.theme-modified {
+		&, td {
+			background-color: #FFECCC !important;
+		}
+	}
+
+
+
+}
+
+
+

@@ -1,0 +1,208 @@
+/*
+ * variables
+ */
+*, *:before, *:after {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+
+.ui {
+  position: absolute;
+  width: 960px;
+  height: 600px;
+  top: 50%;
+  left: 50%;
+  overflow: hidden;
+  margin: -300px 0 0 -480px;
+  -moz-box-shadow: 0 2em 6em #000;
+  -webkit-box-shadow: 0 2em 6em #000;
+  box-shadow: 0 2em 6em #000;
+}
+.ui .redBackgroundStop1 {
+  stop-color: #ff7464;
+}
+.ui .redBackgroundStop2 {
+  stop-color: #ff5440;
+}
+.ui .purpleBackgroundStop1 {
+  stop-color: #c7cbf6;
+}
+.ui .purpleBackgroundStop2 {
+  stop-color: #a8aff1;
+}
+.ui .cyanBackgroundStop1 {
+  stop-color: #82deef;
+}
+.ui .cyanBackgroundStop2 {
+  stop-color: #62d6eb;
+}
+.ui .redForegroundStop1 {
+  stop-color: #fff4f3;
+}
+.ui .redForegroundStop2 {
+  stop-color: #ffbdb5;
+}
+.ui .purpleForegroundStop1 {
+  stop-color: #f3f4fd;
+}
+.ui .purpleForegroundStop2 {
+  stop-color: #cbcff7;
+}
+.ui .cyanForegroundStop1 {
+  stop-color: #e5f8fc;
+}
+.ui .cyanForegroundStop2 {
+  stop-color: #a6e8f4;
+}
+
+.ui__downloadList {
+  margin: 3em 0 0 -3.333%;
+}
+
+.ui__downloadList__graphic {
+  margin: 0.5em;
+  height: 10em;
+}
+
+.ui__downloadList__headline {
+  position: absolute;
+  bottom: 1.25em;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-weight: 100;
+  text-align: center;
+  font-size: 1.75em;
+  text-shadow: 0.1em 0.1em 0.2em #22262e;
+}
+
+.ui__downloadList__backgroundCircle {
+  fill: #fff;
+}
+
+.ui__downloadList__foregroundCircle {
+  fill: #fff;
+  stroke-width: 1px;
+}
+
+.ui__downloadList__item {
+  position: relative;
+  width: 30%;
+  height: 15em;
+  float: left;
+  margin-left: 3.333%;
+  background-color: blue;
+  -moz-box-shadow: 0 0.75em 2.5em #222;
+  -webkit-box-shadow: 0 0.75em 2.5em #222;
+  box-shadow: 0 0.75em 2.5em #222;
+}
+.ui__downloadList__item.red {
+  background-image: -moz-linear-gradient(right bottom, #f1301a, #ff5440);
+  background-image: -webkit-linear-gradient(right bottom, #f1301a, #ff5440);
+  background-image: linear-gradient(to left top, #f1301a, #ff5440);
+}
+.ui__downloadList__item.red .ui__downloadList__backgroundCircle {
+  fill: url(#gradientBackgroundRed);
+}
+.ui__downloadList__item.red .ui__downloadList__foregroundCircle {
+  fill: url(#gradientForegroundRed);
+}
+.ui__downloadList__item.purple {
+  background-image: -moz-linear-gradient(right bottom, #777ec3, #a8aff1);
+  background-image: -webkit-linear-gradient(right bottom, #777ec3, #a8aff1);
+  background-image: linear-gradient(to left top, #777ec3, #a8aff1);
+}
+.ui__downloadList__item.purple .ui__downloadList__backgroundCircle {
+  fill: url(#gradientBackgroundPurple);
+}
+.ui__downloadList__item.purple .ui__downloadList__foregroundCircle {
+  fill: url(#gradientForegroundPurple);
+}
+.ui__downloadList__item.cyan {
+  background-image: -moz-linear-gradient(right bottom, #00a8c9, #62d6eb);
+  background-image: -webkit-linear-gradient(right bottom, #00a8c9, #62d6eb);
+  background-image: linear-gradient(to left top, #00a8c9, #62d6eb);
+}
+.ui__downloadList__item.cyan .ui__downloadList__backgroundCircle {
+  fill: url(#gradientBackgroundCyan);
+}
+.ui__downloadList__item.cyan .ui__downloadList__foregroundCircle {
+  fill: url(#gradientForegroundCyan);
+}
+
+.ui__downloadList__subHeadline {
+  position: absolute;
+  bottom: 1.5em;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-weight: 100;
+  font-size: 0.75em;
+  text-align: center;
+  text-shadow: 0.125em 0.125em 0.2em #22262e;
+}
+
+
+
+.ui__main {
+  width: 85%;
+  height: 100%;
+  float: left;
+  background-image: -moz-linear-gradient(right, #171a1f, #6b798f);
+  background-image: -webkit-linear-gradient(right, #171a1f, #6b798f);
+  background-image: linear-gradient(to left, #171a1f, #6b798f);
+}
+
+.ui__main__content {
+	margin: 75px 10px 36px 111px;
+  width: 75%;
+  padding: 2em;
+}
+
+.ui__main__headline {
+  margin: 0;
+  padding: 0;
+  font-weight: 100;
+  font-size: 1.75em;
+}
+
+
+.ui__timeline {
+  height: 14em;
+  margin: 1em 0 0 0;
+}
+.ui__timeline .domain {
+  display: none;
+}
+.ui__timeline .tick {
+  fill: #dbdcdf;
+  font-size: 0.8em;
+}
+
+.ui__timeline__area {
+  stroke-width: 0.125em;
+}
+.ui__timeline__area.red {
+  fill: rgba(241, 48, 26, 0.7);
+  stroke: #ff5440;
+}
+.ui__timeline__area.purple {
+  fill: rgba(119, 126, 195, 0.7);
+  stroke: #a8aff1;
+}
+.ui__timeline__area.cyan {
+  fill: rgba(0, 168, 201, 0.7);
+  stroke: #62d6eb;
+}
+
+/*
+ * Helper classes
+ */
+.leftfl {
+  float: left;
+}
+
+.rightfl {
+  float: right;
+}

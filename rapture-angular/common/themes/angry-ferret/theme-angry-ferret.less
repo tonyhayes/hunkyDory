@@ -1,0 +1,379 @@
+/* theme-angry-ferret.less */
+
+
+// Variables - Colors
+@themeAngryFerretFrame:         #d5e2cc;
+@themeAngryFerretFontColorDark: #525252;
+@themeAngryFerretFontColorBlue: blue;
+@themeAngryFerretFontColorRed:  red;
+
+@themeAngryFerretNeutral:       #ffffff;
+@themeAngryFerretZebra:         #fafafa;
+
+@themeAngryFerretPrimary:       #97b17c;
+@themeAngryFerretSecondary:     #b2b2b2;
+//@themeAngryFerretButtons:     rgb(237,237,237);
+@themeAngryFerretFrameBorder:   #dbdbdb;
+
+@themeAngryFerretInputBorder:   #f4f4f4;
+
+
+// Variables - Paths
+@themeAngryFerretImageRoot: "images/";
+
+@themeAngryFerretGreenCheck:       "DataCaptureIcons-01.png";
+@themeAngryFerretGreenX:           "DataCaptureIcons-01-02.png";
+@themeAngryFerretGrayCheck:        "DataCaptureIcons-01-03.png";
+@themeAngryFerretGrayX:            "DataCaptureIcons-01-04_resized.png";
+
+@themeAngryFerretCircleGreenCheck: "DataCaptureIcons-01-08.png";
+@themeAngryFerretCircleGreenX:     "DataCaptureIcons-01-07.png";
+@themeAngryFerretCircleGrayCheck:  "DataCaptureIcons-01-06.png";
+@themeAngryFerretCircleGrayX:      "DataCaptureIcons-01-05.png";
+
+@themeAngryFerretWhitePlus:        "white-plus.png";
+@themeAngryFerretWhiteX:           "white-x.png";
+
+//@themeAngryFerretGreenCheck: "DataCaptureIcons-01-01.png";
+
+@themeAngryFerretActionIconWidth:  15px;
+
+
+// Mixins
+.theme-angry-ferret-font-title() {
+	font-weight: bold;
+	font-size: 16px;
+	line-height: 16px;
+}
+.theme-angry-ferret-font-header() {
+	font-weight: bold;
+	font-size: 13px;
+	line-height: 13px;
+}
+.theme-angry-ferret-font-small() {
+	font-weight: normal;
+	font-size: 11px;
+	line-height: 11px;
+}
+.theme-angry-ferret-font-medium() {
+	font-weight: normal;
+	font-size: 12px;
+	line-height: 12px;
+}
+
+
+// Theme styles
+.theme-angry-ferret {
+	clear: both;
+
+	&, * {
+		font-family: "Open Sans";
+	}
+
+	.theme-header {
+		color: @themeAngryFerretFontColorDark;
+		.theme-angry-ferret-font-title;
+		padding-left: 14px;
+		padding-bottom: 20px;
+		line-height: 17px;
+	}
+	.subheader {
+		color: @themeAngryFerretFontColorDark;
+		.theme-angry-ferret-font-header;
+	}
+	.medium-text {
+		color: @themeAngryFerretFontColorDark;
+		.theme-angry-ferret-font-medium;
+	}
+	.small-text {
+		.theme-angry-ferret-font-small;
+	}
+
+	.warning-text {
+		display: inline-block;
+		font-size: 10px;
+		color: @themeAngryFerretFontColorRed;
+		font-weight: bold;
+		font-style: italic;
+		margin: 0 2px;
+	}
+
+	.badge {
+		display: inline-block;
+		background-color: @themeAngryFerretPrimary;
+		color: white;
+		min-width: 14px;
+		min-height: 14px;
+		border-radius: 9999px;
+		text-align: center;
+		line-height: 14px;
+		padding: 3px;
+		white-space: nowrap;
+
+		box-sizing: content-box;
+		-moz-box-sizing: content-box;
+		-webkit-box-sizing: content-box;
+	}
+
+	.theme-frame {
+		background-color: @themeAngryFerretFrame;
+		border-radius: 5px;
+		padding: 20px 16px;
+		margin: 75px 10px 36px 10px;
+		.theme-angry-ferret-font-title;
+
+		.theme-content {
+			color: @themeAngryFerretFontColorDark;
+			background-color: @themeAngryFerretNeutral;
+//			border: 1px solid @themeAngryFerretFrameBorder;
+			border-radius: 5px;
+			.theme-angry-ferret-font-small;
+
+			.theme-content-row {
+				padding: 12px;
+				min-height: 40px;
+
+				&.theme-divider td {
+					border-top: 1px solid @themeAngryFerretFrameBorder;
+				}
+
+				&:first-child {
+					border-radius: 5px 5px 0 0;
+				}
+				&:last-child {
+					border-radius: 0 0 5px 5px;
+				}
+
+				th, td {
+					vertical-align: middle;
+				}
+			}
+			.row-action-spacer {
+				padding-left: @themeAngryFerretActionIconWidth;
+				display: inline-block;
+			}
+		}
+	}
+	.vcenter {
+		vertical-align: middle;
+	}
+	.ralign {
+		text-align: right;
+	}
+	.loading-prompt {
+		text-align: center;
+		font-size: 18px;
+		min-height: 100px;
+		line-height: 100px;
+	}
+	.expander {
+		position: relative;
+		margin-right: 4px;
+		top: 2px;
+		left: -3px;
+		display: none;
+		width: 0;
+		height: 0;
+		content: "";
+		border: 4px solid transparent;
+		border-top: 4px solid @themeAngryFerretFontColorDark;
+		display: inline-block;
+
+		&.right {
+			border-top: 4px solid transparent;
+			border-left: 4px solid @themeAngryFerretFontColorDark;
+			top: 0;
+			left: 0;
+		}
+	}
+	.clickable {
+		cursor: pointer;
+	}
+	.hyperlink {
+		color: @themeAngryFerretFontColorBlue;
+		text-decoration: underline;
+		cursor: pointer;
+	}
+	.close-x {
+		color: #888888;
+		cursor: pointer;
+		text-align: center;
+		transition: all 0.15s ease-out;
+		-o-transition: all 0.15s ease-out;
+		-ms-transition: all 0.15s ease-out;
+		-moz-transition: all 0.15s ease-out;
+		-webkit-transition: all 0.15s ease-out;
+
+		&.close-x-medium {
+			font-size: 18px;
+			line-height: 20px;
+			min-height: 20px;
+			min-width: 20px;
+		}
+	}
+	.button {
+		border-radius: 5px;
+		color: @themeAngryFerretNeutral;
+		min-width: 70px;
+		display: inline-block;
+		text-align: center;
+		padding: 6px 15px;
+		cursor: pointer;
+		transition: all 0.15s ease-out;
+		-o-transition: all 0.15s ease-out;
+		-ms-transition: all 0.15s ease-out;
+		-moz-transition: all 0.15s ease-out;
+		-webkit-transition: all 0.15s ease-out;
+
+		.theme-angry-ferret-font-header;
+
+		&:last-child {
+			margin-right: 16px;
+		}
+
+		&.button-primary {
+			background-color: @themeAngryFerretPrimary;
+		}
+		&.button-secondary {
+			background-color: @themeAngryFerretSecondary;
+		}
+
+		&:hover {
+		  background-color: @themeAngryFerretFontColorDark;
+		}
+	}
+	.dropdown {
+		.dropdown-toggle,
+		.dropdown-menu>li>a {
+			color: @themeAngryFerretFontColorDark;
+			padding: 3px 10px;
+			.theme-angry-ferret-font-small;
+		}
+		.dropdown-toggle {
+			background-color: white;
+			border: 1px solid #ddd;
+			background-image: none;
+			box-shadow: none;
+			text-shadow: none;
+			vertical-align: middle;
+			border-radius: 5px;
+			padding: 3px 10px;
+
+			> * {
+				display: inline-block;
+				vertical-align: middle;			
+			}
+			> .caret {
+				margin: 0 0 0 3px !important;  /* override bootstrap.min.css */
+			}
+		}
+		.dropdown-menu {
+			background-color: white;
+			border: 1px solid #ddd;
+			background-image: none;
+			max-height: 200px;
+			overflow-x: hidden;
+			overflow-y: auto;
+			padding: 0 7px 0 3px;
+
+			> li {
+				&.selected > a {
+					font-weight: bold;
+				}
+				> a:hover,
+				> a:focus {
+					color: black;
+					background-color: @themeAngryFerretFrame;
+				}
+			}
+		}
+	}
+
+
+
+
+
+	// Theme - Icons
+	.icon() {
+		display: inline-block;
+		margin: 0;
+		background: transparent 0 0 no-repeat;
+		vertical-align: middle;
+	}
+	.taf-icon-green-check {
+		.icon;
+		background-image: url("@{themeAngryFerretImageRoot}@{themeAngryFerretGreenCheck}");
+		background-position: -35px -36px;
+		width: 30px;
+		height: 27px;
+	}
+	.taf-icon-green-x {
+		.icon;
+		background-image: url("@{themeAngryFerretImageRoot}@{themeAngryFerretGreenX}");
+		background-position: -37px -36px;
+		width: 27px;
+		height: 27px;
+	}
+	.taf-icon-gray-check {
+		.icon;
+		background-image: url("@{themeAngryFerretImageRoot}@{themeAngryFerretGrayCheck}");
+		background-position: -35px -36px;
+		width: 30px;
+		height: 27px;
+	}
+	.taf-icon-gray-x {
+		.icon;
+		background-image: url("@{themeAngryFerretImageRoot}@{themeAngryFerretGrayX}");
+		background-position: 6px 6px;
+		width: 20px;
+		height: 20px;
+	}
+	.taf-icon-circle-green-check {
+		.icon;
+		background-image: url("@{themeAngryFerretImageRoot}@{themeAngryFerretCircleGreenCheck}");
+		background-position: -20px -20px;
+		width: 60px;
+		height: 60px;
+	}
+	.taf-icon-circle-green-x {
+		.icon;
+		background-image: url("@{themeAngryFerretImageRoot}@{themeAngryFerretCircleGreenX}");
+		background-position: -21px -20px;
+		width: 60px;
+		height: 60px;
+	}
+	.taf-icon-circle-gray-check {
+		.icon;
+		background-image: url("@{themeAngryFerretImageRoot}@{themeAngryFerretCircleGrayCheck}");
+		background-position: -20px -20px;
+		width: 60px;
+		height: 60px;
+	}
+	.taf-icon-circle-gray-x {
+		.icon;
+		background-image: url("@{themeAngryFerretImageRoot}@{themeAngryFerretCircleGrayX}");
+		background-position: -21px -20px;
+		width: 60px;
+		height: 60px;
+	}
+	.taf-button-green-punchout-plus {
+		.icon;
+		background-image: url("@{themeAngryFerretImageRoot}@{themeAngryFerretWhitePlus}");
+		background-position: 6px 4px;
+		width: 27px;
+		height: 23px;
+		background-color: @themeAngryFerretPrimary;
+		border-radius: 5px;
+	}
+	.taf-button-green-punchout-x {
+		.icon;
+		background-image: url("@{themeAngryFerretImageRoot}@{themeAngryFerretWhiteX}");
+		background-position: 6px 4px;
+		width: 27px;
+		height: 23px;
+		background-color: @themeAngryFerretPrimary;
+		border-radius: 5px;
+	}
+}
+
+

@@ -1,0 +1,51 @@
+<table class="table"  ng-repeat="provider in providers">
+	<colgroup>
+		<col width="100%">
+		<col width="150px">
+		<col width="70px">
+	</colgroup>
+	<tbody>
+		<tr class="theme-content-row theme-divider" ng-class="{ 'theme-modified': (!isOpenTab(provider.id) && provider.modified)}">
+			<td ng-click="openTab(provider.id)" class="subheader">
+				<span class="expander" ng-class="{ right: !isOpenTab(provider.id) }"></span>
+				{{provider.name}}
+			</td>
+			<td>
+			</td>
+			<td>
+			</td>
+		</tr>
+		<tr class="theme-content-row theme-divider" ng-show="isOpenTab(provider.id)" 
+		ng-class="{ 'theme-modified': providerEditList[provider.id].selectedGroup.fields.length }">
+			<td>
+				<div><span>Add to request</span></div>
+				<span class="small-text">
+			      <select ng-model="providerEditList[provider.id].selections">
+			        <option ng-repeat="field in providerEditList[provider.id].fields" value="{{field}}">{{field}}</option>
+			      </select>
+
+				</span>
+			
+				<span ng-click="addSelection(provider)" class="hyperlink vcenter">Add</span>
+
+				<div ng-repeat="field in providerEditList[provider.id].groupSelections.fields track by $index">
+					<span ng-click="deleteSelection(field, provider)" class="taf-icon-gray-x vcenter clickable"></span>
+					{{field}}
+				</div>
+			</td>
+			<td>
+			Asset:
+			<textarea ng-list="&#10;" ng-trim="false"ng-model="providerEditList[provider.id].groupSelections.assets" required></textarea>
+			</td>
+			<td>
+				<span
+				  ng-click="createGroup(providerEditList[provider.id].groupSelections, provider)"
+				  ng-disabled="!providerEditList[provider.id].selections"
+				  class="taf-button-green-punchout-plus"
+				>
+				</span>
+			</td>
+		</tr>
+	</tbody>
+</table>
+

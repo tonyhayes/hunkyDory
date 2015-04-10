@@ -1,0 +1,22 @@
+{
+  "data": {
+    "providers": [
+      {
+        "id": 103,
+        "name": "BloombergSAPI",
+        "fields": ["open", "close", "high", "low", "volume" ]
+      },
+      {
+        "id": 2,
+        "name": "NorthernTrust",
+        "fields": ["open", "close", "high", "low", "volume" ]
+      },
+      {
+        "id": 3,
+        "name": "StateStreet",
+        "fields": ["open", "close", "high", "low", "volume" ]
+         }
+
+    ]
+  }
+}

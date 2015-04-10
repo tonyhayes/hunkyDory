@@ -1,0 +1,12 @@
+
+   <div class="dropdown btn-group" dropdown on-toggle="toggled(open)" ng-repeat="dropdown in dropdowns">
+      <div class="dropdown-toggle" dropdown-toggle>
+        {{ getSelectedName($index) }}
+		<b class="caret"></b>
+      </div>
+      <ul class="dropdown-menu">
+        <li ng-repeat="option in dropdown">
+          <a href ng-click="updateModel(option.id)">{{option.name}}</a>
+        </li>
+      </ul>
+    </div>

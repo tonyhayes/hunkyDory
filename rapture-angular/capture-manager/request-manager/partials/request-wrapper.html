@@ -1,0 +1,25 @@
+<div class="theme-frame">
+
+	<div class="theme-header">Define Data Request</div>
+
+	<div
+	  class="theme-content"
+	  request-data-load providers="providers"
+	  provider-edit-list="providerEditList"
+	  provider-data-loaded="providerDataLoaded"
+	  reload-template="reloadTemplate"
+	>
+		<div
+		  ng-if="providerDataLoaded"
+		  request-accordion
+		  providers="providers"
+		  provider-edit-list="providerEditList"
+		>
+		</div>
+
+		<div ng-if="!providerDataLoaded" class="loading-prompt vcenter">
+			Loading provider details...
+		</div>
+	</div>
+</div>
+

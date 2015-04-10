@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html data-ng-app="raptureApp" xmlns="http://www.w3.org/1999/xhtml">
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="app name">
+
+    <title>Rapture</title>
+
+
+
+
+
+    <link rel="icon" href="/images/ui/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+
+    <link rel="stylesheet" type="text/css" href="/rapture-angular/common/lib/bootstrap-3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/rapture-angular/common/lib/toastr/toastr.css">
+
+     <link rel="stylesheet" type="text/css" href="rapture-angular/capture-manager/request-manager/styles/dashboard.css">
+     <link rel="stylesheet" type="text/css" href="rapture-angular/capture-manager/request-manager/styles/request-styles.css">
+ 
+ 
+
+
+</head>
+
+<body>
+    <!-- here's the navbar. -->
+    <div class="navbar navbar-fixed-top" role="navigation">
+            <!-- this is the regularly-sized logo. it appears in all configurations except xs. -->
+            <div id="full-logo" class="hidden-xs">
+                <div class="pull-left">
+                    <a href="#/request" class="navbar-brand"><img src="rapture-angular/common/themes/angry-ferret/images/brandmark.png" alt="logo" class="logo-image"></a>
+                </div>
+            </div>
+
+            
+            <div class="pull-right">
+                <!-- regular navigation menu, hidden at 768px via .collapse tag -->
+                <div class="navbar-collapse pull-right">
+                    <ul class="nav navbar-nav">
+                         <li ng-class="{ active: isCurrentPath('/request') }"><a href="#/request"><span class="glyphicon glyphicon-download"></span><span class="hidden-xs">&nbsp;&nbsp;Data Capture</span></a></li>
+                        <li ng-class="{ active: isCurrentPath('/dashboard') }"><a href="#/dashboard"><span class="glyphicon glyphicon-record"></span><span class="hidden-xs">&nbsp;&nbsp;Dashboard</span></a></li>
+                    </ul>
+                </div>
+            </div>
+
+  <div ng-view></div>
+
+
+   <script src="/rapture-angular/common/lib/jQuery-2.1.3/jquery-2.1.3.min.js"></script>
+
+
+    <script src="/rapture-angular/common/lib/angular-1.4.0-beta.4/angular.min.js"></script>
+    <script src="/rapture-angular/common/lib/angular-1.4.0-beta.4/angular-route.min.js"></script>
+    <script src="/rapture-angular/common/lib/ui-bootstrap-0.12.0/ui-bootstrap-tpls-0.12.0.min.js"></script>
+
+    <script src="/rapture-angular/common/lib/moment-2.9.0/moment.js"></script>
+    <script src="/rapture-angular/common/lib/toastr/toastr.js"></script>
+    <script src="/rapture-angular/common/lib/d3/d3.min.js"></script>
+
+    <script src="/rapture-angular/common/lib/angular-translate-2.6.0/angular-translate.min.js"></script>
+ 
+
+
+       <script>
+            window.raptureApp = angular.module('raptureApp', [
+                'pascalprecht.translate', 'ui.bootstrap', 'raptureAngular.captureManager.request', 'ngRoute'
+            ]);             
+        </script>
+        
+ 
+    <!-- Common Module for all Rapture apps-->
+    <script src="rapture-angular/common/module-common.js"></script>
+
+
+    <!-- Data Capture Manager -->
+    <script src="rapture-angular/capture-manager/module-capture-manager.js"></script>
+
+    <!-- Data Capture Manager Common for all data capture apps -->
+    <script src="rapture-angular/capture-manager/common/module-capture-manager-common.js"></script>
+    <script src="rapture-angular/mock-capture-common.js" /></script>
+
+
+   <!-- Data Request Manager  -->
+
+    <script src="rapture-angular/capture-manager/request-manager/module-request.js" /></script>
+    <script src="rapture-angular/capture-manager/request-manager/directives/request-directives.js" /></script>
+    <script src="rapture-angular/capture-manager/request-manager/services/request-services.js" /></script>
+    <script src="rapture-angular/capture-manager/request-manager/controllers/request-controller.js" /></script>
+    <script src="rapture-angular/capture-manager/request-manager/controllers/request-accordion-controller.js" /></script>
+    <script src="rapture-angular/capture-manager/request-manager/controllers/request-data-load-controller.js" /></script>
+    <script src="rapture-angular/capture-manager/request-manager/controllers/request-dashboard-controller.js" /></script>
+
+
+
+
+
+</body>
+
+</html>
