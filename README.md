@@ -1,1 +1,2 @@
-# scaling-spice
+# Angular directive based application (with bootstrap and LESS) 
+
